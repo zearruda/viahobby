@@ -1,0 +1,156 @@
+	<!-- start: Map -->
+	
+	<div >
+
+		<!-- starts: Google Maps -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<div id="googlemaps-container-top"></div>
+		<div id="googlemaps" class="google-map google-map-full"></div>
+		<div id="googlemaps-container-bottom"></div>
+		<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<script src="js/jquery.gmap.min.js"></script>
+		
+		
+		<script >
+				
+			var tirol=new google.maps.LatLng(-19.989058,-44.046593);
+			function initialize(){
+				var mapProp = {
+					center:tirol,
+					zoom:13,
+					mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+				var map = new google.maps.Map(document.getElementById("googlemaps"),mapProp);
+				
+				
+				var myCity = new google.maps.Circle({
+					center:tirol,
+					radius:1700,
+					strokeColor:"#0000FF",
+					strokeOpacity:0.8,
+					strokeWeight:2,
+					fillColor:"#0000FF",
+					fillOpacity:0.4
+				});
+
+				myCity.setMap(map);
+				
+				
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+			
+			
+	</script>
+		<!-- end: Google Maps -->
+	</div>
+	<!-- end: Map -->	
+	
+	<!-- start: Wrapper -->	
+	<div id="wrapper">		
+
+		<!-- start: Container -->	
+		<div class="container">
+			
+			<!-- start: Row -->
+			<div class="row">
+			
+				<!-- start: Contact Info -->
+				<div class="span3">
+					<div class="title"><h3>Contato</h3></div>
+					<p>
+						<b>ViaHobby Aeromodelismo</b>
+					</p>
+					
+					<p>	
+						Telefone: (31) 8413-9575
+					</p>
+					
+					<p>
+						Email: zearruda@gmail.com
+					</p>	
+					<p>	Email: viahobby@gmail.com
+					</p>
+					<p>
+						Blog: zearruda.blogspot.com.br
+					</p>
+					
+					<p>
+						MercadoShops: http://bhhobbymodel.mercadoshops.com.br
+					</p>
+				</div>
+				<!-- end: Contact Info -->		
+
+				<!-- start: Contact Form -->
+				<div class="span4">
+					<div class="title"><h3>Formulário de contato</h3></div>
+
+					<!-- start: Contact Form -->
+					<div id="contact-form">
+
+						<form method="post" action="contact.html">
+
+							<fieldset>
+								<div class="clearfix">
+									<label for="name"><span>Nome:</span></label>
+									<div class="input">
+										<input tabindex="1" size="18" id="name" name="name" type="text" value="">
+									</div>
+								</div>
+
+								<div class="clearfix">
+									<label for="email"><span>Email:</span></label>
+									<div class="input">
+										<input tabindex="2" size="25" id="email" name="email" type="text" value="" class="input-xlarge">
+									</div>
+								</div>
+
+								<div class="clearfix">
+									<label for="message"><span>Mensagem:</span></label>
+									<div class="input">
+										<textarea tabindex="3" class="input-xlarge" id="message" name="body" rows="7"></textarea>
+									</div>
+								</div>
+
+								<div class="actions">
+									<button tabindex="3" type="submit" class="btn btn-succes btn-large" visible="false">enviar</button>
+								</div>
+							</fieldset>
+
+						</form>
+
+					</div>
+					<!-- end: Contact Form -->
+
+				</div>
+				<!-- end: Contact Form -->
+
+				<!-- start: Social Sites -->
+				<div class="span5">
+					<div class="title"><h3>Siga nos!</h3></div>
+					<ul class="social-bookmarks">
+						
+						<li class="facebook"><a href="https://www.facebook.com/brankic1979themes">facebook</a></li>
+						<li class="flickr"><a href="http://www.flickr.com/photos/brankic1979/">flickr</a></li>
+						<li class="google"><a href="contact.html#">google</a></li>
+						<li class="googleplus"><a href="contact.html#">googleplus</a></li>
+						<li class="linkedin"><a href="contact.html#">linkedin</a></li>
+						<li class="orkut"><a href="contact.html#">orkut</a></li>
+						<li class="picasa"><a href="contact.html#">picasa</a></li>
+						<li class="skype"><a href="contact.html#">skype</a></li>
+						<li class="twitter"><a href="contact.html#">twitter</a></li>
+						<li class="vimeo"><a href="contact.html#">vimeo</a></li>
+						<li class="youtube"><a href="contact.html#">youtube</a></li>
+						
+						
+					</ul>
+				</div>
+				<!-- end: Social Sites -->
+			
+			</div>
+			<!-- end: Row -->
+
+		</div>
+		<!-- end: Container -->
+				
+  	</div>
+	<!-- end: Wrapper  -->

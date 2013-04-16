@@ -1,0 +1,77 @@
+	<!-- start: Page Title -->
+	<div id="page-title">
+
+		<div id="page-title-inner">
+
+			<!-- start: Container -->
+			<div class="container">
+
+				<h2>Calcule o Frete</h2>
+				
+				</div>
+			<!-- end: Container  -->
+
+		</div>	
+
+	</div>
+	<!-- end: Page Title -->
+				
+	<!--start: Wrapper-->
+	<div id="wrapper">
+				
+		<!--start: Container -->
+    	<div class="container">
+			<!-- start: Hero Unit - Main hero unit for a primary marketing message or call to action -->
+      		<div class="hero-unit">
+				<h3>
+						O valor do frete calculado abaixo cabe até 3 aeromodelos. 
+				</h3>
+        		<!--<p><a class="btn btn-primary btn-large">Leia mais &raquo;</a></p>-->
+      		</div>
+			<!-- end: Hero Unit -->
+			<!--start: Row -->
+			<div class="row">
+							
+			<!--start: Calculo Frete -->
+			<div class="span3">
+						
+				<%= form_tag("/fretes/calc", :method => "get", :remote => false, :id => 'calcfrete' ) do %>
+					<legend>Calcule seu frete Aqui!</legend>						
+					<%= text_field_tag  :destino, nil,:placeholder=> 'Digite aqui seu CEP…' %>
+					<%= button_tag "Calcular", :type => 'button', :id => "calcular",  :class=>"btn btn-primary",":data-loading-text"=>"Loading..." %>
+					<button type="button" class="btn btn-primary" data-loading-text="Loading...">Loading state</button>
+				<% end %>
+							
+				
+			</div>
+
+			<!--start: Modal Calculo Frete -->
+			<div id="loading-div-background">
+    			<div id="loading-div" >
+            		<%= image_tag("fancybox_loading.gif", :alt => "loading") %>	
+            		<h2  style="color:gray;font-weight:normal;">Calculando...</h2>
+    			</div>
+			</div>
+			<!--end: Modal Calculo Frete -->
+			
+			</div>
+			<!-- end: Sidebar -->
+			<div id="div-result" style="display: none;">
+				<table class="table table-hover">
+					<tr>
+						<td><%= image_tag("icons/icon_pac.png", :alt => "pac") %>	</td>
+						<td><h2 id="pac"></h2></td>
+					</tr>
+					<tr>
+						<td><%= image_tag("icons/icon_sedex.png", :alt => "pac") %>	</td>
+						<td><h2 id="sedex"></h2></td>
+					</tr>
+     			</table>
+     		</div>	
+
+			<!--End: Calculo Frete -->			
+		</div>
+		<!--end: Container-->
+	
+	</div>
+	<!-- end: Wrapper  -->
